@@ -21,7 +21,18 @@
         <div id="unity-webgl-logo"></div>
         <div id="unity-fullscreen-button"></div>
         <div id="unity-build-title">Ava</div>
-        <img class="ava-logo" src="StreamingAssets/ava_logo.png" alt="ava logo" width="40">
+        <img class="ava-logo" src="StreamingAssets/ava_logo.png" alt="ava logo" width="40" id="ava">
+        <div class="description" id="desc" style="transform: scaleY(0)">
+          <h2>Ava</h2>
+          <h4>Assemble / Disassemble</h4>
+          <p>Ava is an advanced augmented-reality Computer System Services (CSS) android application 
+            that identifies computer hardware and peripherals, providing detailed 
+            information about them. It also features virtual learning modules on 
+            various subjects related to CSS, including the assembly and disassembly of desktop computers. 
+            In this section, users can follow a comprehensive, step-by-step guide 
+            to correctly assemble or disassemble a desktop computer.
+          </p>
+        </div>
       </div>
     </div>
     <script>
@@ -115,6 +126,16 @@
         });
       };
       document.body.appendChild(script);
+
+      var desc = document.getElementById('desc');
+      var ava = document.getElementById('ava');
+      ava.onclick = function() {
+          if (desc.style.transform === 'scaleY(0)') {
+              desc.style.transform = 'scaleY(1)';
+          } else {
+              desc.style.transform = 'scaleY(0)';
+          }
+      };
     </script>
   </body>
 </html>
